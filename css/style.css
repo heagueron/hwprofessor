@@ -1,0 +1,301 @@
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin:0;
+    background-color: #f4f4f4;
+  }
+
+  /*original: */
+  /*.landing{
+    width: 100%;
+    background:url('../img/studying-2.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+  }*/
+
+  /*semi-parallax: */
+.landing{
+    background:url('../img/studying-2.jpg') no-repeat center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: cover;
+    text-align: center;
+  }
+  .container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  /* Header */
+header{
+    /*background: #353637;*/
+    /*color: #ffffff;*/
+    padding-top: 30px;
+    min-height: 70px;
+    /*border-bottom: #32a0c2 3px solid;*/
+    color: #32a0c2;
+    background-color: #ffffff;
+    opacity: 0.7;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+  header a{
+    color:  #32a0c2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+  }
+  header #branding{
+    float: left;
+  }
+  header #branding h1{
+    margin: 0;
+  }
+  header nav{
+    color: rgb(121, 120, 120);
+    float: right;
+    margin-top: 10px;
+  }
+  header .highlight, header .current a{
+    color: #32a0c2;
+    font-weight: bold;
+  }
+  header a:hover{
+    color: black;
+    font-weight: bold;
+  }
+
+/* Showcase */
+#showcase {
+    min-height: 400px;
+    color:  #32a0c2;
+    background-color: #ffffff;
+    opacity: 0.7;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+  #showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
+  #showcase p{
+    font-size: 20px;
+  }
+  /* Newsletter */
+#newsletter{
+    padding: 15px;
+    padding-top: 4rem;
+    /*color: #ffffff;*/
+    /*background: #06a75c;*/
+    color: green;
+    background-color: #ffffff;
+    opacity: 0.7;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+  #newsletter h1{
+    float: left;
+    text-align: right;
+  }
+  #newsletter form{
+    float: right;
+    margin-top: 15px;
+  }
+  #newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+  }
+  .button_1{
+    height: 38px;
+    background: #28b605;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+  }
+  footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #32a0c2;
+    text-align: center;
+  }
+
+  @media(max-width: 768px){
+    .landing{      
+         background:url('../img/studying-2-mobile.jpg') no-repeat center;
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;   
+         background-size: cover;
+         text-align: center;
+       }
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+    header{
+      padding-bottom: 20px;
+    }
+    #showcase h1{
+      margin-top: 40px;
+    }
+    #newsletter button {
+      display: block;
+      width: 100%;
+    }
+    #newsletter form input[type="email"] {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    #newsletter form input[type="email"],
+    .contact input,
+    .contact textarea,
+    .contact label{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 10px;
+      background-color: lightpink;
+      padding: 10px;
+    }
+  }
+
+  /* Sidebar */
+aside#sidebar{
+  float: right;
+  width: 30%;
+  padding: 5px;
+}
+aside#sidebar .contact input, aside#sidebar .contact textarea{
+  width: 90%;
+  padding: 5px;
+}
+article#main-col{
+  float: left;
+  width: 65%;
+}
+/* Services */
+ul#services li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #32a0c2;
+}
+ul#services h3{
+  border-bottom: #353637 solid 1px;
+}
+/* Aditional classes to handle grids */
+
+.grid-quote {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  /*background-color: white;*/
+  padding: 5px;
+  border-top: 2px solid rgb(7, 116, 189);
+  border-bottom: 2px solid rgb(7, 116, 189);
+  margin: 2rem;
+}
+.grid-quote > div {
+  /*background-color: white;*/
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+@media(max-width: 768px){
+  .grid-quote {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 3px;
+    /*background-color: white;*/
+    padding: 5px;
+    border-top: 2px solid rgb(7, 116, 189);
+    border-bottom: 2px solid rgb(7, 116, 189);
+    margin: 1rem;
+  }
+}
+.grid-subjects {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  /*background-color: white;*/
+  padding: 5px;
+
+  margin: 2rem;
+}
+.grid-subjects > div {
+  /*background-color: white;*/
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+@media(max-width: 768px){
+  .grid-subjects {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3px;
+    /*background-color: white;*/
+    padding: 5px;
+
+    margin: 1rem;
+  }
+}
+.grid-examples {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  /*background-color: white;*/
+  padding: 5px;
+
+  margin: 2rem;
+}
+.grid-examples > div {
+  /*background-color: white;*/
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+@media(max-width: 768px){
+  .grid-examples {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 3px;
+    /*background-color: white;*/
+    padding: 5px;
+
+    margin: 1rem;
+  }
+}
+.main{
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /*color: #32a0c2;*/
+}
+.card-pricing{
+  /*border: none; */
+  max-width: 20rem;
+}
+

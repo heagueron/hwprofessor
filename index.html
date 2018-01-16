@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Homework help. Mathematics, Physics, Chemistry, Spanish, Chinese">
+    <meta name="author" content="Héctor Agüero">
+    <title>HWProfessor | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+    <!-- Bootstrap 4.0.0-alpha.6 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+    
+    <!--script src="./prof-app.js"></script-->
+  </head>
+
+  <body>
+      <div class="landing">
+    <header>
+        <div class="container">
+            <div id="branding">
+                    <h1><i class="fa fa-cubes" aria-hidden="true"></i> <span class="highlight">Homework Professor</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="quotation.html">Quotation</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Effective help for your homework assignments.</h1>
+            <p>We got you covered with mathematics, physics, chemistry, spanish, chinese, coding.</p>
+        </div>
+
+    </section>
+
+    <section id="newsletter" style="padding-top:7rem">
+        <div class="container" >
+            <h1>Get Our Newsletter</h1>
+                <form action="">
+                    <input type="email" placeholder="Enter your email address ... ">
+                    <button type="button" class="button_1" id="subscribeButton">Subscribe</button>
+                </form>
+        </div>
+    </section>
+</div>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <i class="fa fa-signal fa-5x"></i>
+                <h3>Mathematics, Physics, Chemistry</h3>
+                <p>We have solutions for mathematics, calculus, algebra, statistics, static and dynamic physics, chemistry.</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-photo fa-5x"></i>
+                <h3>Spanish, Chinese</h3>
+                <p>Exercises and essays in spanish and simplified chinese.</p>
+                <p>Podemos ayudarte!</p>
+                <p>我们会帮忙你！</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-cube fa-5x"></i>
+                <h3>Coding </h3>
+                <p>Design and development of code in javascript, angular, react, php, phyton, etc.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+      <p>Homework Professor, Copyright &copy; 2017</p>
+    </footer>
+    <script>
+        document.getElementById("subscribeButton").addEventListener("click", function(){
+            alert("Thank you. You have been subscribed to our email list");
+        });
+    </script>
+  </body>
+
+</html>
