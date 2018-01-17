@@ -61,7 +61,7 @@ header{
     margin: 0;
   }
   header nav{
-    color: rgb(121, 120, 120);
+    color: rgb(20, 37, 185);
     float: right;
     margin-top: 10px;
   }
@@ -70,7 +70,7 @@ header{
     font-weight: bold;
   }
   header a:hover{
-    color: black;
+    color: green;
     font-weight: bold;
   }
 
