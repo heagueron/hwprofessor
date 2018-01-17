@@ -1,7 +1,7 @@
 {
     "name": "The Most Awesome Homework services Site",
     "short_name": "HWProfessor",
-    "start_url": "/index.html",
+    "start_url": "https://heagueron.github.io/hwprofessor",
     "theme_color": "#673ab6",
     "background_color": "#111111",
     "display": "standalone",
