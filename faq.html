@@ -71,9 +71,20 @@
       <p>Homework Professor, Copyright &copy; 2017</p>
     </footer>
     <script>
-        navigator.serviceWorker && navigator.serviceWorker.register('./js/sw.js').then(function(registration) {
+        navigator.serviceWorker && navigator.serviceWorker.register('./js/sw2.js').then(function(registration) {
+            // Registration was successful :)
             console.log('Excellent, sw registered with scope: ', registration.scope);
-          });
+            }).catch(function(err) {
+            // Registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+            // load script to populate offline page list
+        if (document.getElementById('cachedpagelist') && 'caches' in window) {
+            var scr = document.createElement('script');
+            scr.src = '/js/offlinepage.js';
+            scr.async = 1;
+            document.head.appendChild(scr);
+        }
     </script>
 
   </body>

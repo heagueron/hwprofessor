@@ -60,8 +60,9 @@
     <section id="newsletter" style="padding-top:7rem">
         <div class="container" >
             <h1>Get Our Newsletter</h1>
-                <form action="">
-                    <input type="email" placeholder="Enter your email address ... ">
+                <form name="myForm" class="form-inline" action="">
+                    <label for="email">Email:&nbsp;&nbsp;</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address ..." name="email" required>&nbsp;&nbsp;
                     <button type="button" class="button_1" id="subscribeButton">Subscribe</button>
                 </form>
         </div>
@@ -95,13 +96,35 @@
     </footer>
     <script>
         document.getElementById("subscribeButton").addEventListener("click", function(){
-            alert("Thank you. You have been subscribed to our email list");
+
+            var x = document.forms["myForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+                alert("Please, enter a valid e-mail address");
+                return false;
+            } else {
+                alert("Thank you. You have been subscribed to our email list");
+            }    
+
         });
+
     </script>
     <script>
-            navigator.serviceWorker && navigator.serviceWorker.register('./js/sw.js').then(function(registration) {
-                console.log('Excellent, sw registered with scope: ', registration.scope);
-              });
+        navigator.serviceWorker && navigator.serviceWorker.register('./js/sw2.js').then(function(registration) {
+            // Registration was successful :)
+            console.log('Excellent, sw registered with scope: ', registration.scope);
+            }).catch(function(err) {
+            // Registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+            // load script to populate offline page list
+        if (document.getElementById('cachedpagelist') && 'caches' in window) {
+            var scr = document.createElement('script');
+            scr.src = '/js/offlinepage.js';
+            scr.async = 1;
+            document.head.appendChild(scr);
+        }
     </script>
   </body>
 
